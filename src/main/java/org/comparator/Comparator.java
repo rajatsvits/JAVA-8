@@ -1,4 +1,4 @@
-package org.rajat;
+package org.comparator;
 
 /*
 @author Rajat Mahajan
