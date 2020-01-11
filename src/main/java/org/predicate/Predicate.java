@@ -14,4 +14,9 @@ public interface Predicate<T>  {
   public  default Predicate<T> or(Predicate<T> p2){
     return t -> test(t) || p2.test(t);
   }
+
+  //Will compare past string to current constant/Fixed string.
+  public static Predicate<String> isEqualTo(String s){
+    return s1 -> s1.equals(s);
+  }
 }

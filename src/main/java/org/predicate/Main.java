@@ -23,5 +23,15 @@ public class Main {
     System.out.println("P4 for Yes: "+p4.test("Yes"));
     System.out.println("P4 for rajat: "+p4.test("rajat"));
     System.out.println("P4 for Good Morning rajat: "+p4.test("Good Morning rajat"));
+
+    //Compare Pattern
+    String FixedString = "Yes";
+    Predicate<String> p5 = Predicate.isEqualTo(FixedString);
+    System.out.println("\nEqualTo Method: ");
+    System.out.println("P5 value: "+p5);
+    System.out.println("P5 for Yes: "+p5.test("Yes"));
+    System.out.println("P5 for No: "+p5.test("No"));
+    System.out.println("P5 for YES "+p5.test("YES"));
+
   }
 }
