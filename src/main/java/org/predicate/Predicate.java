@@ -16,7 +16,7 @@ public interface Predicate<T>  {
   }
 
   //Will compare past string to current constant/Fixed string.
-  public static Predicate<String> isEqualTo(String s){
+  public static <U> Predicate<U> isEqualTo(U s){
     return s1 -> s1.equals(s);
   }
 }

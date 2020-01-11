@@ -33,5 +33,14 @@ public class Main {
     System.out.println("P5 for No: "+p5.test("No"));
     System.out.println("P5 for YES "+p5.test("YES"));
 
+    //Generic Compare Pattern
+    int FixedInteger = 1;
+    Predicate<Integer> p6 = Predicate.isEqualTo(FixedInteger);
+    System.out.println("\nEqualTo Method: ");
+    System.out.println("P6 value: "+p6);
+    System.out.println("P6 for Yes: "+p6.test(2));
+    System.out.println("P6 for No: "+p6.test(1));
+    System.out.println("P6 for YES "+p6.test(0));
+
   }
 }
