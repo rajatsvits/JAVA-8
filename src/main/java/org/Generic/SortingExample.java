@@ -1,5 +1,7 @@
 package org.Generic;
 
+import static java.util.Collections.min;
+
 import java.util.ArrayList;
 import java.util.Collections;
 import java.util.Comparator;
@@ -29,5 +31,25 @@ public class SortingExample {
     System.out.println("Inbuilt comparator: "+brothers);
     Collections.sort(brothers,new ReverseComparator<>(new AgeComparator()));
     System.out.println("Reverse comparator with parameteriesd: "+brothers);
+
+    final Person youngestBrother = min(brothers, new AgeComparator());
+    System.out.println("Youngest brother "+youngestBrother);
+    final Person youngestBrother2 = (Person) min1(brothers, new AgeComparator());
+    System.out.println("Youngest brother mycode: "+youngestBrother);
+
+  }
+
+  private static Object min1(List values, Comparator comparator) {
+    if(values.isEmpty()){
+      throw new IllegalArgumentException("List is empty");
+    }
+
+    Object lowestElement = values.get(0);
+    for(int i=1;i<values.size();i++){
+      if(comparator.compare(lowestElement,values.get(i))<0){
+        lowestElement=values.get(i);
+      }
+    }
+    return lowestElement;
   }
 }
