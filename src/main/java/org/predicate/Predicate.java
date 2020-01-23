@@ -15,8 +15,8 @@ public interface Predicate<T>  {
     return t -> test(t) || p2.test(t);
   }
 
-  //Will compare past string to current constant/Fixed string.
-  public static <U> Predicate<U> isEqualTo(U s){
+  //Will compare past string/integer to current constant/Fixed string.
+  default Predicate<T> isEqualTo(T s){
     return s1 -> s1.equals(s);
   }
 }
