@@ -37,6 +37,7 @@ public class SortingExample {
     final Person youngestBrother2 = (Person) min1(brothers, new AgeComparator());
     System.out.println("Youngest brother mycode: "+youngestBrother);
 
+
   }
 
   private static Object min1(List values, Comparator comparator) {
