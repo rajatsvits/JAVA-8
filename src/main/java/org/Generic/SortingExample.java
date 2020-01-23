@@ -7,7 +7,7 @@ import java.util.Collections;
 import java.util.Comparator;
 import java.util.List;
 
-public class SortingExample {
+public class SortingExample<T> {
 
   public static void main(String[] args) {
     Person rajat = new Person("rajat",24);
@@ -36,16 +36,23 @@ public class SortingExample {
     System.out.println("Youngest brother "+youngestBrother);
     final Person youngestBrother2 = (Person) min1(brothers, new AgeComparator());
     System.out.println("Youngest brother mycode: "+youngestBrother);
+//    We have deleted the cast because we have changed the return type form Object ot T
+    final Person youngestBrother3 = min1(brothers, new AgeComparator());
+    System.out.println("Youngest brother Generic: "+youngestBrother);
 
-
+    List<Integer> integers = new ArrayList<>();
+    integers.add(1);
+    integers.add(3);
+    integers.add(2);
+    System.out.println("Generic min method for integer: "+min(integers,Integer::compareTo));
   }
 
-  private static Object min1(List values, Comparator comparator) {
+  private static <T> T min1(List<T> values, Comparator<T> comparator) {
     if(values.isEmpty()){
       throw new IllegalArgumentException("List is empty");
     }
 
-    Object lowestElement = values.get(0);
+    T lowestElement = values.get(0);
     for(int i=1;i<values.size();i++){
       if(comparator.compare(lowestElement,values.get(i))<0){
         lowestElement=values.get(i);
