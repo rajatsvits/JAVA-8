@@ -1,5 +1,6 @@
-package org.Generic;
+package org.generic.feature;
 
+import org.generic.feature.SortedPair;
 import org.junit.Test;
 import org.junit.runner.RunWith;
 import org.mockito.runners.MockitoJUnitRunner;

@@ -1,4 +1,4 @@
-package org.Generic;
+package org.generic.feature;
 
 //We want to make use of feature known as type bound so we extend comparable  method
 // so my compiler know that anything i am passing left/first or right/second is a class that implements

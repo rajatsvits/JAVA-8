@@ -1,4 +1,4 @@
-package org.Generic;
+package org.generic.feature;
 
 import java.util.Comparator;
 

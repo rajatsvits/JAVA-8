@@ -1,4 +1,4 @@
-package org.Generic;
+package org.generic.feature;
 
 import static java.util.Collections.min;
 
@@ -6,6 +6,7 @@ import java.util.ArrayList;
 import java.util.Collections;
 import java.util.Comparator;
 import java.util.List;
+import org.generic.Person;
 
 public class SortingExample<T> {
 

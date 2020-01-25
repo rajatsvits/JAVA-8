@@ -1,6 +1,7 @@
-package org.Generic;
+package org.generic.feature;
 
 import java.util.Comparator;
+import org.generic.Person;
 
 public class AgeComparator implements Comparator<Person> {
 
