@@ -1,0 +1,9 @@
+<component name="ArtifactManager">
+  <artifact type="jar" name="implementations:jar">
+    <output-path>$PROJECT_DIR$/out/artifacts/implementations_jar</output-path>
+    <root id="archive" name="Implementations.jar">
+      <element id="module-output" name="ClassloadingWithItf.Implementations.main" />
+      <element id="module-output" name="ClassloadingWithItf.Interfaces.main" />
+    </root>
+  </artifact>
+</component>

@@ -1,0 +1,9 @@
+<component name="ArtifactManager">
+  <artifact type="jar" name="LoadingFromDb.Implementations.main:jar">
+    <output-path>$PROJECT_DIR$/out/artifacts/Implementations_jar</output-path>
+    <root id="archive" name="Implementations.jar">
+      <element id="module-output" name="LoadingFromDb.Implementations.main" />
+      <element id="module-output" name="LoadingFromDb.Interfaces.main" />
+    </root>
+  </artifact>
+</component>
